@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^online/', course.CourseOnlineView.as_view()),
     url(r'^chapter/', course.CourseChapterView.as_view()),
     # url(r'^shopcar/(?P<id>\d+)/', shopcar.ShopCarView.as_view({'post':'create'})),
-    url(r'^shopcar/', shopcar.ShopCarView.as_view({'post':'create','get':'list'})),
+    # 购物车
+    url(r'^shopcar/', shopcar.ShopCarView.as_view({'post':'create','get':'list','delete':'destroy','put':'update'})),
 ]
